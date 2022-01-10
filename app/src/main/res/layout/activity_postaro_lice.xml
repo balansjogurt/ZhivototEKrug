@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostaroLiceActivity"
+    android:background="@color/snow_2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        app:title="@string/app_name"
+        android:backgroundTint="@color/snow_4"
+        app:titleTextColor="@color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/userActivityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Submit an Activity"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/activityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/userActivityTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Service Title:"
+                android:textStyle="bold"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/editTextActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/activityTitle"
+                android:layout_marginTop="5dp"
+                android:hint="Enter an activity"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C"/>
+
+            <TextView
+                android:id="@+id/activityDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/editTextActivity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Activity description:"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/activityDescription"
+                android:hint="Enter the activity description"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C"/>
+
+            <TextView
+                android:id="@+id/frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Frequency of activity:"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/radioFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/frequency"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/once"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Once"
+                    android:checked="true"
+                    android:onClick="Frequency"
+                    android:textColor="@color/black"
+                    />
+                <RadioButton
+                    android:id="@+id/weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly"
+                    android:onClick="Frequency"
+                    android:textColor="@color/black"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/timeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/radioFrequency"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Duration and date:"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/timeFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/timeTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:hint="From"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:drawableTop="@drawable/ic_time"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="SelectTime"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C" />
+
+            <TextView
+                android:id="@+id/timeTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/timeTitle"
+                app:layout_constraintLeft_toRightOf="@+id/timeFrom"
+                android:hint="To"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:drawableTop="@drawable/ic_time"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="SelectTime"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/timeTitle"
+                app:layout_constraintLeft_toRightOf="@+id/timeTo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="Date"
+                android:drawableTop="@drawable/ic_date"
+                android:gravity="center"
+                android:onClick="SelectDate"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/timeTitle"
+                app:layout_constraintLeft_toRightOf="@+id/timeTo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog"
+                android:entries="@array/arrayDays"
+                android:theme="@style/spinnerTheme"
+                android:backgroundTint="@color/black" />
+
+            <TextView
+                android:id="@+id/locationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDays"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Location:"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/locationTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:hint="Location"
+                android:drawableLeft="@drawable/ic_location"
+                android:gravity="left"
+                android:onClick="SelectLocation"
+                android:textColor="@color/black"
+                android:textColorHint="#7E7C7C"
+                />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/snow_3"
+                android:textColor="@color/black"
+                android:text="Submit"
+                android:onClick="Submit"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

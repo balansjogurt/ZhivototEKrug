@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003859411064",
+    "project_id": "zhivototekrug-cd197",
+    "storage_bucket": "zhivototekrug-cd197.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003859411064:android:cbb9bd4d752cdd9906ad8d",
+        "android_client_info": {
+          "package_name": "com.example.zhivototekrug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003859411064-bam2u3el8l8dtiuc50qmj1icgrcrqj4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOW5BSOrbCOPjo77rf2K9tN0KrYFlXQaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003859411064-bam2u3el8l8dtiuc50qmj1icgrcrqj4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

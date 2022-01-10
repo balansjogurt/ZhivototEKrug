@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Life is a Circle</string>
+    <string-array name="arrayDays">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="arrayStatus">
+        <item>Reserved</item>
+        <item>Waiting</item>
+        <item>Finished</item>
+    </string-array>
+
+</resources>
